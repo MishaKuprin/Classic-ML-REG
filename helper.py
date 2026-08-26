@@ -288,9 +288,9 @@ def train_evaluate_model_cv_reg(model, model_name, X, y,
     )
 
     metrics = {
-        'MAE': cv_results['test_MAE'].mean(),
-        'MAPE': cv_results['test_MAPE'].mean(),
-        'RMSE': cv_results['test_RMSE'].mean(),
+        'MAE': abs(cv_results['test_MAE'].mean()),
+        'MAPE': abs(cv_results['test_MAPE'].mean()),
+        'RMSE': abs(cv_results['test_RMSE'].mean()),
         'R2': cv_results['test_R2'].mean(),
     }
 
